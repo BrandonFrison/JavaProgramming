@@ -1,0 +1,125 @@
+import java.util.Iterator;
+
+public class LinkedDictionary<K, V> implements DictionaryInterface<K, V>{
+
+	private Node firstNode;
+	private int numberOfEntries;
+	
+	public LinkedDictionary(){
+		initialize();
+	}
+	
+	
+	@Override
+	public V add(K key, V value) {
+		// TODO Auto-generated method stub
+		V result = null;
+		Node currentNode = firstNode;
+		
+		if(currentNode != null && key.equals(currentNode.getKey())){
+			result = (V) currentNode.getValue();
+			currentNode.setValue(value);
+		}
+		return result;
+	}
+
+	@Override
+	public V remove(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public V getValue(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean contains(Object key) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Iterator getKeyIterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterator getValueIterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private class Node<K, V>
+	{
+      private K    key; // key of pair
+      private V	   value; // value of pair
+      private Node next; // Link to next node
+
+      private Node(K keyPortion, V valuePortion)
+      {
+         this(keyPortion, valuePortion, null);
+      } // end constructor
+
+      private Node(K keyPortion, V valuePortion, Node linkPortion)
+      {
+         key = keyPortion;
+         value = valuePortion;
+         next = linkPortion;	
+      } // end constructor
+
+      private K getKey()
+      {
+         return key;
+      } 
+
+      private void setKey(K newKey)
+      {
+         key = newKey;
+      } 
+      
+      private V getValue()
+      {
+    	  return value;
+      }
+      
+      private void setValue(V newValue)
+      {
+    	  value = newValue;
+      }
+      
+      
+
+      private Node getNextNode()
+      {
+         return next;
+      } // end getNextNode
+
+      private void setNextNode(Node nextNode)
+      {
+         next = nextNode;
+      } // end setNextNode
+	} // end Node
+	
+}

@@ -1,0 +1,9 @@
+Factorial of: 5 equals = 120
+Factorial of: 4 equals = 24
+Factorial of: 12 equals = 479001600
+Factorial of: 6 equals = 720
+Factorial of: 18 equals = 6402373705728000
+Factorial of: 12 equals = 479001600
+Factorial of: 5 equals = 120
+Factorial of: 4 equals = 24
+Factorial of: 9 equals = 362880
